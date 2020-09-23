@@ -10,17 +10,17 @@
   // https://firebase.google.com/docs/firestore/manage-data/add-data#set_a_document
   function savePerson() {
     // save the person object to the database under their first name
-    db.collection('people').doc(person.firstName).set(person)
+    db.collection('People').doc(person.firstName).set(person)
   }
 
 
   // https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
   async function getPerson() {
     // get the document from the database for the given name
-    let doc = await db.collection('people').doc(person.firstName).get()
+    let personDoc = await db.collection('People').doc(person.firstName).get()
 
     // get the data from the person document
-    person = doc.data()
+    person = personDoc.data()
   }
 </script>
 

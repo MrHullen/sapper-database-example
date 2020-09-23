@@ -13,36 +13,35 @@
 
 <body>
 	<div id='sapper'>%sapper.html%</div>
-	%sapper.scripts%
-
 	
-	<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script>
+	
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+			https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
 
 	<script>
-		/* How to get the firebaseConfig variable:
-		* 1. Go to your Firebase Project Console (https://console.firebase.google.com/)
-		* 2. Go to Project Settings (cog icon in top left)
-		* 3. Scroll down to 'Your apps' and add or find your web app
-		*/
-		let firebaseConfig = {
-			apiKey: "AIzaSyAMcP1TT58mCjpoMtXmX9EHa36OUPGTDAQ",
-			authDomain: "sapper-example-682e7.firebaseapp.com",
-			databaseURL: "https://sapper-example-682e7.firebaseio.com",
-			projectId: "sapper-example-682e7",
-			storageBucket: "sapper-example-682e7.appspot.com",
-			messagingSenderId: "568423520923",
-			appId: "1:568423520923:web:6b3b0beeba2677d91cc43e"
-		}
-
-		// start the database with your personal configuration (above)
-		firebase.initializeApp(firebaseConfig)
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCKE3BtdLKuICdn9ODDxvj-5cn8oMRe0uE",
+			authDomain: "sapper-example-d8353.firebaseapp.com",
+			databaseURL: "https://sapper-example-d8353.firebaseio.com",
+			projectId: "sapper-example-d8353",
+			storageBucket: "sapper-example-d8353.appspot.com",
+			messagingSenderId: "885118614592",
+			appId: "1:885118614592:web:69447bfdca87f827d173a5"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
 
 		// create the database variable so that the rest of the app can use it
 		const db = firebase.firestore()
-
-		
 	</script>
+
+
+	%sapper.scripts%
 </body>
 
 </html>
